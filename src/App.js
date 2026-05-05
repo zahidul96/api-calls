@@ -1,4 +1,5 @@
 import React, { useState, useRef,useEffect } from "react";
+import MovieForm from "./MovieForm";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -32,6 +33,7 @@ const App = () => {
   };
   return (
     <>
+    <MovieForm/>
       <h1>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
       </h1>
