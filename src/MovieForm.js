@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const MovieForm = () => {
+const MovieForm = (props) => {
   const [userData, setUserData] = useState({
     title: "",
     openingText: "",
@@ -12,7 +12,7 @@ const MovieForm = () => {
       openingText: userData.openingText,
       releaseDate: userData.releaseDate,
     };
-    console.log(newMovieObject);
+    props.onMovieAdd(newMovieObject);
     setUserData({
       title: "",
       openingText: "",
